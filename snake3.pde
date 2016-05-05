@@ -17,6 +17,12 @@ int[] killx = new int[500];
 int[] killy = new int[500];
 void setup()
 {
+   size(500,500);
+  frameRate(13); 
+  snakex[0] = 250; // otherwise game ends
+  snakey[0] = 250;
+  foodx = (floor(random(40))+2)*10;
+  foody = (floor(random(40))+2)*10;
 }
 
 
