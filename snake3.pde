@@ -7,7 +7,7 @@ int[] snakex = new int[500];
 int[] snakey = new int[500];
 int[] xrate = new int[2];
 int[] yrate = new int[2];
-int gametime;
+int gamestate;
 int foodx = 0;
 int foody = 0;
 int points;
@@ -27,7 +27,7 @@ void setup()
 
 void draw()
 {
-  if (gametime == 0)
+  if (gamestate == 0)
   {
  img = loadImage("12345.jpg");
  image(img,0,0);
@@ -62,16 +62,17 @@ void draw()
       {
         if (snakex[0] == killx[count] && snakey[0] == killy[count]) // is snake kill
         {
-          gametime = 1; 
+          gamestate = 1; 
         }
       }
     }
     if (snakex[0] >= 500 || snakex[0] <= 0 || snakey[0] >= 500 || snakey[0] <= 0)
     {
-      gametime = 1;
+      gamestate = 1;
     }
     
     if (snakex[0] == foodx && snakey[0] == foody) // snake eat
+    
     {
       snakelength++;   
       points++;
@@ -91,6 +92,7 @@ void draw()
     fill(255);
     text("PRESS ENTER", 50,225);
     fill(255);
+     snakelength = 0;
   }
 }
 

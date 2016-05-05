@@ -23,6 +23,6 @@ void keyPressed()
   if (keyCode == ENTER)
   {
       setup();
-      gametime = 0;
+      gamestate = 0;
   }
 }
