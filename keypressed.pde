@@ -1,6 +1,6 @@
 void keyPressed()
 {
-  if (keyCode == UP )
+  if (keyCode == UP)
   {
     xrate[0] = 0;
     yrate[0] = -10;
