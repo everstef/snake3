@@ -17,7 +17,7 @@ int[] killy = new int[500];
 void setup()
 {
    size(500,500);
-  frameRate(20); 
+  frameRate(14); 
   snakex[0] = 250; // otherwise game ends
   snakey[0] = 250;
   foodx = (floor(random(40))+2)*10;
